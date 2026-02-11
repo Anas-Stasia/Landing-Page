@@ -199,3 +199,23 @@ nav {
     gap: 1rem;
     flex-wrap: wrap;
 }
+.primary-btn {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5);
+}
