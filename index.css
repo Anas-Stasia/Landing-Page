@@ -414,3 +414,33 @@ nav {
     border-color: rgba(255, 107, 53, 0.3);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
