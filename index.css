@@ -527,3 +527,18 @@ footer {
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.7;
 }
+
+.footer-column h4 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem;
+}
