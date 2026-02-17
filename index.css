@@ -597,3 +597,20 @@ footer {
     .section-header h2 {
         font-size: 2rem;
     }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .cta-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .card-metrics {
+        grid-template-columns: 1fr;
+    }
+}
