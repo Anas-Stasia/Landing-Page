@@ -57,3 +57,26 @@ window.addEventListener('scroll', () => {
     
     lastScroll = currentScroll;
 });
+
+// Animated Counter for Metrics
+const animateCounter = (element, target, duration = 2000) => {
+    const start = 0;
+    const increment = target / (duration / 16); // 60fps
+    let current = start;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target + (target === 342 ? '%' : '');
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current) + (target === 342 ? '%' : '');
+        }
+    }, 16);
+};
+
+// Intersection Observer for Scroll Animations
+const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -100px 0px'
+};
