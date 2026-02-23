@@ -101,3 +101,20 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, observerOptions);
+
+
+// Observe elements for animation
+document.querySelectorAll('.feature-card, .section-header, .metric-value').forEach(el => {
+    observer.observe(el);
+});
+
+// Parallax Effect for Hero Background
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    
+    if (hero && scrolled < hero.offsetHeight) {
+        const parallax = scrolled * 0.5;
+        hero.style.transform = `translateY(${parallax}px)`;
+    }
+});
