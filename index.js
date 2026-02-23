@@ -135,3 +135,19 @@ document.querySelectorAll('.primary-btn, .secondary-btn').forEach(btn => {
     });
 });
 */
+
+// Typing Effect for Hero Headline (alternative animation)
+const typeWriter = (element, text, speed = 50) => {
+    let i = 0;
+    element.textContent = '';
+    
+    const type = () => {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    };
+    
+    type();
+};
