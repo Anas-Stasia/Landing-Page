@@ -80,3 +80,24 @@ const observerOptions = {
     threshold: 0.2,
     rootMargin: '0px 0px -100px 0px'
 };
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            
+            // Animate counters when they become visible
+            if (entry.target.classList.contains('metric-value')) {
+                const text = entry.target.textContent;
+                if (text.includes('%')) {
+                    animateCounter(entry.target, 342);
+                } else if (text.includes('24/7')) {
+                    entry.target.textContent = '24/7';
+                }
+            }
+            
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
