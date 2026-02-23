@@ -118,3 +118,20 @@ window.addEventListener('scroll', () => {
         hero.style.transform = `translateY(${parallax}px)`;
     }
 });
+
+// Form Validation (if you add a form later)
+const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+};
+
+// Add hover effect sound (optional - commented out by default)
+/*
+const hoverSound = new Audio('path-to-hover-sound.mp3');
+document.querySelectorAll('.primary-btn, .secondary-btn').forEach(btn => {
+    btn.addEventListener('mouseenter', () => {
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+    });
+});
+*/
