@@ -151,3 +151,18 @@ const typeWriter = (element, text, speed = 50) => {
     
     type();
 };
+
+// Cursor Trail Effect (optional fancy feature)
+let cursorTrail = [];
+const maxTrailLength = 20;
+
+document.addEventListener('mousemove', (e) => {
+    // Only on desktop
+    if (window.innerWidth > 768) {
+        cursorTrail.push({ x: e.clientX, y: e.clientY });
+        
+        if (cursorTrail.length > maxTrailLength) {
+            cursorTrail.shift();
+        }
+    }
+});
