@@ -183,3 +183,10 @@ document.addEventListener('keydown', (e) => {
         konamiIndex = 0;
     }
 });
+
+const activateEasterEgg = () => {
+    document.body.style.animation = 'rainbow 2s infinite';
+    setTimeout(() => {
+        document.body.style.animation = '';
+    }, 5000);
+};
