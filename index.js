@@ -208,3 +208,24 @@ const lazyLoadImages = () => {
     
     images.forEach(img => imageObserver.observe(img));
 };
+
+// Initialize lazy loading
+lazyLoadImages();
+
+// Add loading animation
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
+
+// Scroll Progress Indicator
+const createScrollProgress = () => {
+    const progressBar = document.createElement('div');
+    progressBar.classList.add('scroll-progress');
+    document.body.appendChild(progressBar);
+    
+    window.addEventListener('scroll', () => {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (window.pageYOffset / windowHeight) * 100;
+        progressBar.style.width = scrolled + '%';
+    });
+};
