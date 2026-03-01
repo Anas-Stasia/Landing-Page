@@ -229,3 +229,19 @@ const createScrollProgress = () => {
         progressBar.style.width = scrolled + '%';
     });
 };
+
+createScrollProgress();
+
+// Console Easter Egg
+console.log('%c👋 Hey there, curious developer!', 'font-size: 20px; font-weight: bold; color: #FF6B35;');
+console.log('%cWe love curious minds. Check out our careers page!', 'font-size: 14px; color: #FFD23F;');
+console.log('%c🚀 Built with passion and lots of coffee ☕', 'font-size: 12px; color: #fff;');
+
+// Performance monitoring (optional)
+if ('performance' in window) {
+    window.addEventListener('load', () => {
+        const perfData = performance.timing;
+        const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+        console.log(`Page loaded in ${pageLoadTime}ms`);
+    });
+}
