@@ -190,3 +190,21 @@ const activateEasterEgg = () => {
         document.body.style.animation = '';
     }, 5000);
 };
+
+// Lazy Loading Images (if you add images later)
+const lazyLoadImages = () => {
+    const images = document.querySelectorAll('img[data-src]');
+    
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+};
